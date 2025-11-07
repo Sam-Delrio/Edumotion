@@ -1,12 +1,12 @@
 import { useState } from "react"
 import { Link, NavLink } from "react-router-dom"
-import { Menu, X } from "lucide-react"
+import { Menu, X, Home, BookOpen, MessageSquare, Phone } from "lucide-react"
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   const linkClass = ({ isActive }) =>
-    `block px-4 py-2 text-lg transition-colors ${
+    `flex items-center gap-2 px-4 py-2 text-lg transition-colors ${
       isActive ? "text-brand-500 font-semibold" : "text-gray-700 hover:text-brand-500"
     }`
 
@@ -20,6 +20,7 @@ export default function Header() {
         >
           Edumotion
         </Link>
+
         <button
           className="md:hidden text-brand-500"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -27,50 +28,42 @@ export default function Header() {
         >
           {menuOpen ? <X size={26} /> : <Menu size={26} />}
         </button>
+
+        {/* Menú Desktop */}
         <nav className="hidden md:flex space-x-6">
           <NavLink to="/" className={linkClass}>
-            Inicio
+            <Home size={18} /> Inicio
           </NavLink>
           <NavLink to="/courses" className={linkClass}>
-            Cursos
+            <BookOpen size={18} /> Cursos
           </NavLink>
           <NavLink to="/testimonials" className={linkClass}>
-            Testimonios
+            <MessageSquare size={18} /> Testimonios
           </NavLink>
           <NavLink to="/contact" className={linkClass}>
-            Contacto
+            <Phone size={18} /> Contacto
           </NavLink>
         </nav>
       </div>
+
+      {/* Menú Móvil */}
       {menuOpen && (
         <nav className="md:hidden bg-white border-t border-gray-100 shadow-md animate-slide-down">
-          <NavLink
-            to="/"
-            className={linkClass}
-            onClick={() => setMenuOpen(false)}
-          >
-            Inicio
+          <NavLink to="/" className={linkClass} onClick={() => setMenuOpen(false)}>
+            <Home size={18} /> Inicio
           </NavLink>
-          <NavLink
-            to="/courses"
-            className={linkClass}
-            onClick={() => setMenuOpen(false)}
-          >
-            Cursos
+          <NavLink to="/courses" className={linkClass} onClick={() => setMenuOpen(false)}>
+            <BookOpen size={18} /> Cursos
           </NavLink>
           <NavLink
             to="/testimonials"
             className={linkClass}
             onClick={() => setMenuOpen(false)}
           >
-            Testimonios
+            <MessageSquare size={18} /> Testimonios
           </NavLink>
-          <NavLink
-            to="/contact"
-            className={linkClass}
-            onClick={() => setMenuOpen(false)}
-          >
-            Contacto
+          <NavLink to="/contact" className={linkClass} onClick={() => setMenuOpen(false)}>
+            <Phone size={18} /> Contacto
           </NavLink>
         </nav>
       )}
