@@ -33,7 +33,7 @@ La app está construida como una **Single Page Application (SPA)** con navegaci�
 
 ---
 
-##  Demo en línea
+##  Pagina
 
  **GitHub Pages:**  
  [https://sam-delrio.github.io/Edumotion/](https://sam-delrio.github.io/Edumotion/)
