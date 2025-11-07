@@ -1,4 +1,4 @@
-# 🧠 Edumotion – Plataforma Educativa Futurista
+#  Edumotion – Plataforma Educativa Futurista
 
 Proyecto para la **Actividad Entregable 1** - **Ingeniería Web II**.  
 La aplicación busca representar a **Edumotion**, una startup educativa enfocada en la enseñanza digital con un enfoque moderno, flexible y visualmente limpio.
