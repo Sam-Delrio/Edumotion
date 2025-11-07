@@ -5,3 +5,18 @@ html, body {
   background: radial-gradient(circle at top right, #f8fafc, #eef4ff 40%, #ffffff);
   color: #111827;
 }
+
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-down {
+  animation: slide-down 0.25s ease-out;
+}
