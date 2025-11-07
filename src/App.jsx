@@ -72,7 +72,7 @@ function AnimatedRoutes() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Edumotion">
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="grow container mx-auto px-4 py-8">
